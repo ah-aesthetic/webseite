@@ -1,3 +1,19 @@
+import { Cormorant_Garamond, Montserrat } from 'next/font/google';
+
+const cormorant = Cormorant_Garamond({
+  subsets: ['latin', 'cyrillic'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-cormorant',
+  display: 'swap',
+});
+
+const montserrat = Montserrat({
+  subsets: ['latin', 'cyrillic'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-montserrat',
+  display: 'swap',
+});
+
 export const metadata = {
   title: 'Anna Hryshchenko | Ästhetische Medizin München',
   description: 'Ästhetische Behandlungen in München – Botulinumtoxin, Skinbooster, Polynukleotide. Natürliche Schönheit durch medizinische Expertise.',
@@ -14,7 +30,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="de">
+    <html lang="de" className={`${cormorant.variable} ${montserrat.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
