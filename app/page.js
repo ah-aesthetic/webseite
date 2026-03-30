@@ -5,23 +5,25 @@ import React, { useState } from 'react';
 const translations = {
   de: {
     langName: 'DE',
+    flag: '🇩🇪',
     heroSubtitle: 'ÄSTHETISCHE MEDIZIN IN MÜNCHEN',
     heroName: 'ANNA HRYSHCHENKO',
-    heroTitle: 'Ärztin für Ästhetik und Frauengesundheit',
     heroText: 'Natürliche Schönheit durch medizinische Expertise.',
     heroTagline: 'Individuell. Professionell. Diskret.',
     ctaButton: 'BEHANDLUNGEN ENTDECKEN',
     aboutLabel: 'ÜBER MICH',
-    aboutTitle: 'Ihre Ärztin für Ästhetik',
+    aboutTitle: 'Ärztin für Ästhetik und Frauengesundheit',
     aboutText1: 'Als approbierte Gynäkologin verbinde ich medizinisches Fachwissen mit einem ausgeprägten Sinn für natürliche Ästhetik. Mein Ziel ist es, Ihre individuelle Schönheit zu unterstreichen – nicht zu verändern.',
     aboutText2: 'Jede Behandlung beginnt mit einer ausführlichen Beratung, um Ihre Wünsche zu verstehen und einen maßgeschneiderten Behandlungsplan zu erstellen. Dabei setze ich ausschließlich auf CE-zertifizierte, in der EU zugelassene Produkte.',
-    aboutBadge1: 'Approbierte Ärztin',
-    aboutBadge2: 'Bayerische Landesärztekammer',
+    aboutBadge1: 'Approbierte Gynäkologin',
+    aboutBadge2: 'Viersprachig: Deutsch, Ukrainisch, Englisch, Russisch',
     aboutBadge3: 'Individuelle Beratung',
+    aboutBadge4: 'Einsatz für Naturschutz',
+    aboutBadge5: 'Natürliches Ergebnis',
     treatmentsLabel: 'LEISTUNGEN & PREISE',
     treatmentsTitle: 'Behandlungen',
     categoryPakete: 'Botox Pakete',
-    categoryEinzel: 'Botox Einzel',
+    categoryEinzel: 'Botox 1 Zone',
     categorySkinbooster: 'Skinbooster',
     categoryPolynukleotide: 'Polynukleotide',
     treatmentNote1: 'Kostenlose Nachkorrektur nach 14 Tagen (falls erforderlich)',
@@ -44,25 +46,70 @@ const translations = {
     polynukleotideTitle: 'Polynukleotide',
     polynukleotideSubtitle: 'Langfristige Hautregeneration & Biostimulation',
   },
+  uk: {
+    langName: 'UK',
+    flag: '🇺🇦',
+    heroSubtitle: 'ЕСТЕТИЧНА МЕДИЦИНА В МЮНХЕНІ',
+    heroName: 'АННА ГРИЩЕНКО',
+    heroText: 'Природна краса завдяки медичній експертизі.',
+    heroTagline: 'Індивідуально. Професійно. Конфіденційно.',
+    ctaButton: 'ДІЗНАТИСЯ ПРО ПРОЦЕДУРИ',
+    aboutLabel: 'ПРО МЕНЕ',
+    aboutTitle: 'Лікар естетичної медицини та жіночого здоров\'я',
+    aboutText1: 'Як ліцензований гінеколог, я поєдную медичні знання з тонким відчуттям природної естетики. Моя мета — підкреслити вашу індивідуальну красу, а не змінити її.',
+    aboutText2: 'Кожна процедура починається з детальної консультації, щоб зрозуміти ваші побажання та скласти індивідуальний план лікування. Я використовую виключно сертифіковані CE продукти, схвалені в ЄС.',
+    aboutBadge1: 'Ліцензований гінеколог',
+    aboutBadge2: 'Чотири мови: німецька, українська, англійська, російська',
+    aboutBadge3: 'Індивідуальна консультація',
+    aboutBadge4: 'Підтримка охорони природи',
+    aboutBadge5: 'Природний результат',
+    treatmentsLabel: 'ПОСЛУГИ ТА ЦІНИ',
+    treatmentsTitle: 'Процедури',
+    categoryPakete: 'Пакети ботоксу',
+    categoryEinzel: 'Ботокс 1 зона',
+    categorySkinbooster: 'Скінбустери',
+    categoryPolynukleotide: 'Полінуклеотиди',
+    treatmentNote1: 'Безкоштовна корекція через 14 днів (за потреби)',
+    treatmentNote2: 'Усі продукти сертифіковані CE та схвалені в ЄС',
+    contactLabel: 'КОНТАКТ',
+    contactTitle: 'Записатися на прийом',
+    contactText: 'Буду рада вашому зверненню.',
+    contactInstagram: 'Напишіть мені в Instagram',
+    contactForm: 'Або залиште заявку тут',
+    location: 'Мюнхен',
+    footerTitle: 'АННА ГРИЩЕНКО',
+    footerSubtitle: 'Естетична медицина · Мюнхен',
+    footerCopyright: '© 2026 Анна Грищенко · Усі права захищені',
+    impressum: 'Імпресум',
+    datenschutz: 'Політика конфіденційності',
+    paketeTitle: 'Пакети процедур',
+    einzelTitle: 'Окремі процедури',
+    skinboosterTitle: 'Скінбустери',
+    skinboosterSubtitle: 'Інтенсивне зволоження та покращення якості шкіри',
+    polynukleotideTitle: 'Полінуклеотиди',
+    polynukleotideSubtitle: 'Довготривала регенерація шкіри та біостимуляція',
+  },
   en: {
     langName: 'EN',
+    flag: '🇬🇧',
     heroSubtitle: 'AESTHETIC MEDICINE IN MUNICH',
     heroName: 'ANNA HRYSHCHENKO',
-    heroTitle: 'Physician for Aesthetics and Women\'s Health',
     heroText: 'Natural beauty through medical expertise.',
     heroTagline: 'Individual. Professional. Discreet.',
     ctaButton: 'DISCOVER TREATMENTS',
     aboutLabel: 'ABOUT ME',
-    aboutTitle: 'Your Aesthetic Physician',
+    aboutTitle: 'Physician for Aesthetics and Women\'s Health',
     aboutText1: 'As a licensed gynecologist, I combine medical expertise with a keen sense for natural aesthetics. My goal is to enhance your individual beauty – not to change it.',
     aboutText2: 'Every treatment begins with a thorough consultation to understand your wishes and create a customized treatment plan. I exclusively use CE-certified products approved in the EU.',
-    aboutBadge1: 'Licensed Physician',
-    aboutBadge2: 'Bavarian Medical Association',
+    aboutBadge1: 'Licensed Gynecologist',
+    aboutBadge2: 'Multilingual: German, Ukrainian, English, Russian',
     aboutBadge3: 'Individual Consultation',
+    aboutBadge4: 'Commitment to Nature Conservation',
+    aboutBadge5: 'Natural Results',
     treatmentsLabel: 'SERVICES & PRICES',
     treatmentsTitle: 'Treatments',
     categoryPakete: 'Botox Packages',
-    categoryEinzel: 'Botox Single',
+    categoryEinzel: 'Botox 1 Zone',
     categorySkinbooster: 'Skinbooster',
     categoryPolynukleotide: 'Polynucleotides',
     treatmentNote1: 'Free touch-up after 14 days (if needed)',
@@ -87,23 +134,25 @@ const translations = {
   },
   ru: {
     langName: 'RU',
+    flag: '🇷🇺',
     heroSubtitle: 'ЭСТЕТИЧЕСКАЯ МЕДИЦИНА В МЮНХЕНЕ',
     heroName: 'АННА ГРИЩЕНКО',
-    heroTitle: 'Врач эстетической медицины и женского здоровья',
     heroText: 'Естественная красота благодаря медицинской экспертизе.',
     heroTagline: 'Индивидуально. Профессионально. Конфиденциально.',
     ctaButton: 'УЗНАТЬ О ПРОЦЕДУРАХ',
     aboutLabel: 'ОБО МНЕ',
-    aboutTitle: 'Ваш врач-эстетист',
+    aboutTitle: 'Врач эстетической медицины и женского здоровья',
     aboutText1: 'Как лицензированный гинеколог, я сочетаю медицинские знания с тонким чувством естественной эстетики. Моя цель — подчеркнуть вашу индивидуальную красоту, а не изменить её.',
     aboutText2: 'Каждая процедура начинается с подробной консультации, чтобы понять ваши пожелания и составить индивидуальный план лечения. Я использую исключительно сертифицированные CE продукты, одобренные в ЕС.',
-    aboutBadge1: 'Лицензированный врач',
-    aboutBadge2: 'Баварская врачебная палата',
+    aboutBadge1: 'Лицензированный гинеколог',
+    aboutBadge2: 'Четыре языка: немецкий, украинский, английский, русский',
     aboutBadge3: 'Индивидуальная консультация',
+    aboutBadge4: 'Поддержка охраны природы',
+    aboutBadge5: 'Естественный результат',
     treatmentsLabel: 'УСЛУГИ И ЦЕНЫ',
     treatmentsTitle: 'Процедуры',
     categoryPakete: 'Пакеты ботокса',
-    categoryEinzel: 'Ботокс зоны',
+    categoryEinzel: 'Ботокс 1 зона',
     categorySkinbooster: 'Скинбустеры',
     categoryPolynukleotide: 'Полинуклеотиды',
     treatmentNote1: 'Бесплатная коррекция через 14 дней (при необходимости)',
@@ -125,47 +174,6 @@ const translations = {
     skinboosterSubtitle: 'Интенсивное увлажнение и улучшение качества кожи',
     polynukleotideTitle: 'Полинуклеотиды',
     polynukleotideSubtitle: 'Долгосрочная регенерация кожи и биостимуляция',
-  },
-  uk: {
-    langName: 'UK',
-    heroSubtitle: 'ЕСТЕТИЧНА МЕДИЦИНА В МЮНХЕНІ',
-    heroName: 'АННА ГРИЩЕНКО',
-    heroTitle: 'Лікар естетичної медицини та жіночого здоров\'я',
-    heroText: 'Природна краса завдяки медичній експертизі.',
-    heroTagline: 'Індивідуально. Професійно. Конфіденційно.',
-    ctaButton: 'ДІЗНАТИСЯ ПРО ПРОЦЕДУРИ',
-    aboutLabel: 'ПРО МЕНЕ',
-    aboutTitle: 'Ваш лікар-естетист',
-    aboutText1: 'Як ліцензований гінеколог, я поєдную медичні знання з тонким відчуттям природної естетики. Моя мета — підкреслити вашу індивідуальну красу, а не змінити її.',
-    aboutText2: 'Кожна процедура починається з детальної консультації, щоб зрозуміти ваші побажання та скласти індивідуальний план лікування. Я використовую виключно сертифіковані CE продукти, схвалені в ЄС.',
-    aboutBadge1: 'Ліцензований лікар',
-    aboutBadge2: 'Баварська лікарська палата',
-    aboutBadge3: 'Індивідуальна консультація',
-    treatmentsLabel: 'ПОСЛУГИ ТА ЦІНИ',
-    treatmentsTitle: 'Процедури',
-    categoryPakete: 'Пакети ботоксу',
-    categoryEinzel: 'Ботокс зони',
-    categorySkinbooster: 'Скінбустери',
-    categoryPolynukleotide: 'Полінуклеотиди',
-    treatmentNote1: 'Безкоштовна корекція через 14 днів (за потреби)',
-    treatmentNote2: 'Усі продукти сертифіковані CE та схвалені в ЄС',
-    contactLabel: 'КОНТАКТ',
-    contactTitle: 'Записатися на прийом',
-    contactText: 'Буду рада вашому зверненню.',
-    contactInstagram: 'Напишіть мені в Instagram',
-    contactForm: 'Або залиште заявку тут',
-    location: 'Мюнхен',
-    footerTitle: 'АННА ГРИЩЕНКО',
-    footerSubtitle: 'Естетична медицина · Мюнхен',
-    footerCopyright: '© 2026 Анна Грищенко · Усі права захищені',
-    impressum: 'Імпресум',
-    datenschutz: 'Політика конфіденційності',
-    paketeTitle: 'Пакети процедур',
-    einzelTitle: 'Окремі процедури',
-    skinboosterTitle: 'Скінбустери',
-    skinboosterSubtitle: 'Інтенсивне зволоження та покращення якості шкіри',
-    polynukleotideTitle: 'Полінуклеотиди',
-    polynukleotideSubtitle: 'Довготривала регенерація шкіри та біостимуляція',
   },
 };
 
@@ -199,6 +207,8 @@ const treatmentsData = {
     { name: { de: 'Gesicht + Hals', en: 'Face + Neck', ru: 'Лицо + Шея', uk: 'Обличчя + Шия' }, price: 'Ab 600 €', desc: { de: 'Kombinierte Hautregeneration', en: 'Combined skin regeneration', ru: 'Комбинированная регенерация', uk: 'Комбінована регенерація' } },
   ],
 };
+
+const langOrder = ['de', 'uk', 'en', 'ru'];
 
 export default function Home() {
   const [lang, setLang] = useState('de');
@@ -238,28 +248,32 @@ export default function Home() {
         right: '20px',
         zIndex: 1000,
         display: 'flex',
-        gap: '8px',
+        gap: '6px',
         background: 'rgba(255,255,255,0.95)',
         padding: '8px 12px',
         borderRadius: '25px',
         boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
       }}>
-        {['de', 'en', 'ru', 'uk'].map(l => (
+        {langOrder.map(l => (
           <button
             key={l}
             onClick={() => setLang(l)}
             style={{
-              padding: '6px 12px',
+              padding: '6px 10px',
               border: 'none',
               borderRadius: '15px',
               fontSize: '12px',
               fontWeight: '600',
               cursor: 'pointer',
               fontFamily: fontBody,
+              display: 'flex',
+              alignItems: 'center',
+              gap: '5px',
               background: lang === l ? 'linear-gradient(135deg, #c9a087 0%, #b8927a 100%)' : 'transparent',
               color: lang === l ? 'white' : '#8b7355',
             }}
           >
+            <span style={{ fontSize: '14px' }}>{translations[l].flag}</span>
             {translations[l].langName}
           </button>
         ))}
@@ -292,18 +306,15 @@ export default function Home() {
           background: 'linear-gradient(135deg, rgba(253,246,240,0.85) 0%, rgba(250,232,224,0.8) 50%, rgba(245,220,208,0.85) 100%)',
           zIndex: 1,
         }} />
-        <div style={{ position: 'relative', zIndex: 2 }}>
+        <div style={{ position: 'relative', zIndex: 2, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <div style={{ fontFamily: fontBody, fontSize: '13px', letterSpacing: '4px', color: '#b8927a', marginBottom: '20px', fontWeight: '400' }}>
             {t.heroSubtitle}
           </div>
           <h1 style={{ fontFamily: fontHeading, fontSize: 'clamp(40px, 9vw, 72px)', fontWeight: '400', margin: '0 0 10px 0', letterSpacing: '2px', color: '#5a4a3a' }}>
             {t.heroName}
           </h1>
-          <div style={{ fontFamily: fontBody, fontSize: '15px', color: '#8b7355', letterSpacing: '2px', marginBottom: '15px', fontWeight: '400' }}>
-            {t.heroTitle}
-          </div>
-          <div style={{ width: '60px', height: '1px', background: 'linear-gradient(90deg, transparent, #c9a087, transparent)', margin: '25px auto' }} />
-          <p style={{ fontFamily: fontHeading, fontSize: '22px', fontWeight: '400', fontStyle: 'italic', color: '#5a4a3a', maxWidth: '500px', lineHeight: '1.6', marginBottom: '10px' }}>
+          <div style={{ width: '60px', height: '1px', background: 'linear-gradient(90deg, transparent, #c9a087, transparent)', margin: '25px 0' }} />
+          <p style={{ fontFamily: fontHeading, fontSize: '22px', fontWeight: '400', fontStyle: 'italic', color: '#5a4a3a', maxWidth: '500px', lineHeight: '1.6', marginBottom: '10px', textAlign: 'center' }}>
             {t.heroText}
           </p>
           <p style={{ fontFamily: fontBody, fontSize: '14px', fontWeight: '400', color: '#8b7355', letterSpacing: '3px', marginBottom: '40px' }}>
@@ -353,10 +364,12 @@ export default function Home() {
             <p style={{ fontFamily: fontBody, fontSize: '15px', lineHeight: '1.9', color: '#6a5a4a', marginBottom: '20px', fontWeight: '400' }}>{t.aboutText1}</p>
             <p style={{ fontFamily: fontBody, fontSize: '15px', lineHeight: '1.9', color: '#6a5a4a', fontWeight: '400' }}>{t.aboutText2}</p>
             <div style={{ marginTop: '30px', padding: '20px', background: '#fdf6f0', borderRadius: '12px' }}>
-              <div style={{ fontFamily: fontBody, fontSize: '13px', color: '#b8927a', letterSpacing: '0.5px', lineHeight: '1.8', fontWeight: '500' }}>
+              <div style={{ fontFamily: fontBody, fontSize: '13px', color: '#b8927a', letterSpacing: '0.5px', lineHeight: '2', fontWeight: '500' }}>
                 ✓ {t.aboutBadge1}<br />
                 ✓ {t.aboutBadge2}<br />
-                ✓ {t.aboutBadge3}
+                ✓ {t.aboutBadge3}<br />
+                ✓ {t.aboutBadge4}<br />
+                ✓ {t.aboutBadge5}
               </div>
             </div>
           </div>
