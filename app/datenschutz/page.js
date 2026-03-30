@@ -4,9 +4,12 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 
+const langOrder = ['de', 'uk', 'en', 'ru'];
+
 const translations = {
   de: {
     langName: 'DE',
+    flag: '🇩🇪',
     backLink: '← Zurück zur Startseite',
     title: 'DATENSCHUTZ',
     responsibleTitle: 'Verantwortliche Stelle',
@@ -48,6 +51,7 @@ const translations = {
   },
   en: {
     langName: 'EN',
+    flag: '🇬🇧',
     backLink: '← Back to Homepage',
     title: 'PRIVACY POLICY',
     responsibleTitle: 'Responsible Party',
@@ -89,6 +93,7 @@ const translations = {
   },
   ru: {
     langName: 'RU',
+    flag: '🇷🇺',
     backLink: '← Вернуться на главную',
     title: 'ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ',
     responsibleTitle: 'Ответственная сторона',
@@ -130,6 +135,7 @@ const translations = {
   },
   uk: {
     langName: 'UK',
+    flag: '🇺🇦',
     backLink: '← Повернутися на головну',
     title: 'ПОЛІТИКА КОНФІДЕНЦІЙНОСТІ',
     responsibleTitle: 'Відповідальна сторона',
@@ -208,22 +214,26 @@ export default function Datenschutz() {
     <div style={styles.container}>
       {/* Language Switcher */}
       <div style={styles.langSwitcher}>
-        {['de', 'en', 'ru', 'uk'].map(l => (
+        {langOrder.map(l => (
           <button
             key={l}
             onClick={() => setLang(l)}
             style={{
               fontFamily: fontBody,
-              padding: '6px 12px',
+              padding: '6px 10px',
               border: 'none',
               borderRadius: '15px',
               fontSize: '12px',
               fontWeight: '600',
               cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '5px',
               background: lang === l ? 'linear-gradient(135deg, #c9a087 0%, #b8927a 100%)' : 'transparent',
               color: lang === l ? 'white' : '#8b7355',
             }}
           >
+            <span style={{ fontSize: '14px' }}>{translations[l].flag}</span>
             {translations[l].langName}
           </button>
         ))}
