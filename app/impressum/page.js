@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 
@@ -41,6 +41,41 @@ const translations = {
     home: 'Startseite',
     privacy: 'Datenschutz',
     name: 'Anna Hryshchenko',
+  },
+  uk: {
+    langName: 'UK',
+    flag: '🇺🇦',
+    backLink: '← Повернутися на головну',
+    title: 'ІМПРЕСУМ',
+    section1Title: 'Інформація згідно з § 5 TMG',
+    section2Title: 'Контакт',
+    section3Title: 'Професійне звання та правова інформація',
+    designation: 'Професійне звання',
+    designationValue: 'Лікар',
+    approbation: 'Ліцензія видана в',
+    approbationValue: 'Німеччині',
+    chamber: 'Відповідальна палата',
+    chamberName: 'Баварська лікарська палата',
+    regulations: 'Професійні норми',
+    regulation1: 'Професійний кодекс лікарів Баварії',
+    regulation2: 'Закон про палати медичних професій (HKaG)',
+    regulationsNote: '(доступно на',
+    section4Title: 'Відповідальний за зміст згідно з § 55 Abs. 2 RStV',
+    section5Title: 'Врегулювання спорів ЄС',
+    section5Text: 'Європейська комісія надає платформу для онлайн-врегулювання спорів (OS):',
+    section5Note: 'Наша електронна адреса вказана вище в імпресумі.',
+    section6Title: 'Врегулювання споживчих спорів',
+    section6Text: 'Ми не готові і не зобов\'язані брати участь у процедурах врегулювання спорів перед споживчим арбітражним органом.',
+    section7Title: 'Відповідальність за зміст',
+    section7Text: 'Як постачальник послуг, ми несемо відповідальність за власний контент на цих сторінках відповідно до загального законодавства згідно з § 7 Abs.1 TMG. Однак, згідно з §§ 8-10 TMG, ми не зобов\'язані контролювати передану або збережену інформацію третіх осіб. При виявленні правопорушень ми негайно видалимо такий контент.',
+    section8Title: 'Відповідальність за посилання',
+    section8Text: 'Наша пропозиція містить посилання на зовнішні веб-сайти третіх осіб, на зміст яких ми не маємо впливу. Тому ми не можемо нести відповідальність за цей зовнішній контент. При виявленні правопорушень ми негайно видалимо такі посилання.',
+    section9Title: 'Авторське право',
+    section9Text: 'Контент і роботи, створені операторами сайту на цих сторінках, захищені німецьким авторським правом. Відтворення, редагування, поширення та будь-яке використання за межами авторського права вимагають письмової згоди відповідного автора або творця.',
+    footerCopyright: '© 2026 Анна Грищенко · Усі права захищені',
+    home: 'Головна',
+    privacy: 'Політика конфіденційності',
+    name: 'Анна Грищенко',
   },
   en: {
     langName: 'EN',
@@ -112,44 +147,9 @@ const translations = {
     privacy: 'Политика конфиденциальности',
     name: 'Анна Грищенко',
   },
-  uk: {
-    langName: 'UK',
-    flag: '🇺🇦',
-    backLink: '← Повернутися на головну',
-    title: 'ІМПРЕСУМ',
-    section1Title: 'Інформація згідно з § 5 TMG',
-    section2Title: 'Контакт',
-    section3Title: 'Професійне звання та правова інформація',
-    designation: 'Професійне звання',
-    designationValue: 'Лікар',
-    approbation: 'Ліцензія видана в',
-    approbationValue: 'Німеччині',
-    chamber: 'Відповідальна палата',
-    chamberName: 'Баварська лікарська палата',
-    regulations: 'Професійні норми',
-    regulation1: 'Професійний кодекс лікарів Баварії',
-    regulation2: 'Закон про палати медичних професій (HKaG)',
-    regulationsNote: '(доступно на',
-    section4Title: 'Відповідальний за зміст згідно з § 55 Abs. 2 RStV',
-    section5Title: 'Врегулювання спорів ЄС',
-    section5Text: 'Європейська комісія надає платформу для онлайн-врегулювання спорів (OS):',
-    section5Note: 'Наша електронна адреса вказана вище в імпресумі.',
-    section6Title: 'Врегулювання споживчих спорів',
-    section6Text: 'Ми не готові і не зобов\'язані брати участь у процедурах врегулювання спорів перед споживчим арбітражним органом.',
-    section7Title: 'Відповідальність за зміст',
-    section7Text: 'Як постачальник послуг, ми несемо відповідальність за власний контент на цих сторінках відповідно до загального законодавства згідно з § 7 Abs.1 TMG. Однак, згідно з §§ 8-10 TMG, ми не зобов\'язані контролювати передану або збережену інформацію третіх осіб. При виявленні правопорушень ми негайно видалимо такий контент.',
-    section8Title: 'Відповідальність за посилання',
-    section8Text: 'Наша пропозиція містить посилання на зовнішні веб-сайти третіх осіб, на зміст яких ми не маємо впливу. Тому ми не можемо нести відповідальність за цей зовнішній контент. При виявленні правопорушень ми негайно видалимо такі посилання.',
-    section9Title: 'Авторське право',
-    section9Text: 'Контент і роботи, створені операторами сайту на цих сторінках, захищені німецьким авторським правом. Відтворення, редагування, поширення та будь-яке використання за межами авторського права вимагають письмової згоди відповідного автора або творця.',
-    footerCopyright: '© 2026 Анна Грищенко · Усі права захищені',
-    home: 'Головна',
-    privacy: 'Політика конфіденційності',
-    name: 'Анна Грищенко',
-  },
 };
 
-export default function Impressum() {
+function ImpressumContent() {
   const searchParams = useSearchParams();
   const [lang, setLang] = useState('de');
   const t = translations[lang];
@@ -176,12 +176,11 @@ export default function Impressum() {
     highlight: { background: '#fdf6f0', padding: '20px', borderRadius: '12px', marginTop: '15px' },
     link: { color: '#b8927a', textDecoration: 'none' },
     footer: { textAlign: 'center', padding: '40px 20px', fontSize: '13px', color: '#8b7355' },
-    langSwitcher: { position: 'fixed', top: '20px', right: '20px', zIndex: 1000, display: 'flex', gap: '8px', background: 'rgba(255,255,255,0.95)', padding: '8px 12px', borderRadius: '25px', boxShadow: '0 4px 20px rgba(0,0,0,0.1)' },
+    langSwitcher: { position: 'fixed', top: '20px', right: '20px', zIndex: 1000, display: 'flex', gap: '6px', background: 'rgba(255,255,255,0.95)', padding: '8px 12px', borderRadius: '25px', boxShadow: '0 4px 20px rgba(0,0,0,0.1)' },
   };
 
   return (
     <div style={styles.container}>
-      {/* Language Switcher */}
       <div style={styles.langSwitcher}>
         {langOrder.map(l => (
           <button
@@ -303,5 +302,13 @@ export default function Impressum() {
         </p>
       </footer>
     </div>
+  );
+}
+
+export default function Impressum() {
+  return (
+    <Suspense fallback={<div style={{ minHeight: '100vh', background: '#fdf6f0' }} />}>
+      <ImpressumContent />
+    </Suspense>
   );
 }
