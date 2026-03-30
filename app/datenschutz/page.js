@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 
@@ -48,6 +48,48 @@ const translations = {
     home: 'Startseite',
     legalNotice: 'Impressum',
     name: 'Anna Hryshchenko',
+  },
+  uk: {
+    langName: 'UK',
+    flag: '🇺🇦',
+    backLink: '← Повернутися на головну',
+    title: 'ПОЛІТИКА КОНФІДЕНЦІЙНОСТІ',
+    responsibleTitle: 'Відповідальна сторона',
+    section1Title: '1. Загальна інформація',
+    section1Text: 'Захист ваших персональних даних є для нас особливою турботою. Тому ми обробляємо ваші дані виключно на підставі законодавчих положень (GDPR, BDSG, TMG). У цій політиці конфіденційності ми інформуємо вас про найважливіші аспекти обробки даних на нашому сайті.',
+    section2Title: '2. Хостинг і технічна інфраструктура',
+    vercelTitle: 'Vercel Inc.',
+    vercelText: 'Наш сайт розміщено на Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA. При відвідуванні нашого сайту автоматично збираються технічні дані доступу (IP-адреса, тип браузера, операційна система, час доступу). Це технічно необхідно для роботи сайту.',
+    cloudinaryTitle: 'Cloudinary',
+    cloudinaryText: 'Для надання зображень ми використовуємо Cloudinary Ltd., 111 W Evelyn Ave, Suite 206, Sunnyvale, CA 94086, USA. Cloudinary зберігає та доставляє медіафайли.',
+    legalBasis: 'Правова основа',
+    legalBasisF: 'Ст. 6 абз. 1 літ. f GDPR (законний інтерес)',
+    legalBasisB: 'Ст. 6 абз. 1 літ. b GDPR (ініціювання договору)',
+    section3Title: '3. Зв\'язок',
+    formspreeTitle: 'Formspree',
+    formspreeText: 'Для контактних форм ми використовуємо Formspree Inc., 822 Guilford Ave #961, Baltimore MD 21202, USA. При відправці форми введені вами дані передаються до Formspree та пересилаються на нашу електронну адресу.',
+    emailjsTitle: 'EmailJS',
+    emailjsText: 'Альтернативно може використовуватися EmailJS для доставки електронної пошти. EmailJS обробляє дані, введені у форму, для доставки вашого повідомлення.',
+    gmailTitle: 'Google Mail (Gmail)',
+    gmailText: 'Для електронного листування ми використовуємо Google Mail (Gmail), сервіс Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ірландія. Електронні листи обробляються та зберігаються на серверах Google.',
+    section4Title: '4. Ваші права',
+    section4Intro: 'Ви маєте право в будь-який час на:',
+    right1: 'Інформацію про ваші дані, що зберігаються у нас (ст. 15 GDPR)',
+    right2: 'Виправлення неправильних даних (ст. 16 GDPR)',
+    right3: 'Видалення ваших даних (ст. 17 GDPR)',
+    right4: 'Обмеження обробки (ст. 18 GDPR)',
+    right5: 'Переносимість даних (ст. 20 GDPR)',
+    right6: 'Заперечення проти обробки (ст. 21 GDPR)',
+    right7: 'Скаргу до наглядового органу (ст. 77 GDPR)',
+    section5Title: '5. Безпека даних',
+    section5Text: 'Наш сайт використовує SSL- або TLS-шифрування з міркувань безпеки. Зашифроване з\'єднання можна розпізнати за значком замка в адресному рядку браузера.',
+    section6Title: '6. Актуальність і зміни цієї політики конфіденційності',
+    section6Text: 'Ця політика конфіденційності актуальна станом на березень 2026 року. У зв\'язку з подальшим розвитком нашого сайту або зміною законодавчих вимог може виникнути необхідність змінити цю політику конфіденційності.',
+    lastUpdated: 'Актуально: березень 2026',
+    footerCopyright: '© 2026 Анна Грищенко · Усі права захищені',
+    home: 'Головна',
+    legalNotice: 'Імпресум',
+    name: 'Анна Грищенко',
   },
   en: {
     langName: 'EN',
@@ -133,51 +175,9 @@ const translations = {
     legalNotice: 'Импрессум',
     name: 'Анна Грищенко',
   },
-  uk: {
-    langName: 'UK',
-    flag: '🇺🇦',
-    backLink: '← Повернутися на головну',
-    title: 'ПОЛІТИКА КОНФІДЕНЦІЙНОСТІ',
-    responsibleTitle: 'Відповідальна сторона',
-    section1Title: '1. Загальна інформація',
-    section1Text: 'Захист ваших персональних даних є для нас особливою турботою. Тому ми обробляємо ваші дані виключно на підставі законодавчих положень (GDPR, BDSG, TMG). У цій політиці конфіденційності ми інформуємо вас про найважливіші аспекти обробки даних на нашому сайті.',
-    section2Title: '2. Хостинг і технічна інфраструктура',
-    vercelTitle: 'Vercel Inc.',
-    vercelText: 'Наш сайт розміщено на Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA. При відвідуванні нашого сайту автоматично збираються технічні дані доступу (IP-адреса, тип браузера, операційна система, час доступу). Це технічно необхідно для роботи сайту.',
-    cloudinaryTitle: 'Cloudinary',
-    cloudinaryText: 'Для надання зображень ми використовуємо Cloudinary Ltd., 111 W Evelyn Ave, Suite 206, Sunnyvale, CA 94086, USA. Cloudinary зберігає та доставляє медіафайли.',
-    legalBasis: 'Правова основа',
-    legalBasisF: 'Ст. 6 абз. 1 літ. f GDPR (законний інтерес)',
-    legalBasisB: 'Ст. 6 абз. 1 літ. b GDPR (ініціювання договору)',
-    section3Title: '3. Зв\'язок',
-    formspreeTitle: 'Formspree',
-    formspreeText: 'Для контактних форм ми використовуємо Formspree Inc., 822 Guilford Ave #961, Baltimore MD 21202, USA. При відправці форми введені вами дані передаються до Formspree та пересилаються на нашу електронну адресу.',
-    emailjsTitle: 'EmailJS',
-    emailjsText: 'Альтернативно може використовуватися EmailJS для доставки електронної пошти. EmailJS обробляє дані, введені у форму, для доставки вашого повідомлення.',
-    gmailTitle: 'Google Mail (Gmail)',
-    gmailText: 'Для електронного листування ми використовуємо Google Mail (Gmail), сервіс Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ірландія. Електронні листи обробляються та зберігаються на серверах Google.',
-    section4Title: '4. Ваші права',
-    section4Intro: 'Ви маєте право в будь-який час на:',
-    right1: 'Інформацію про ваші дані, що зберігаються у нас (ст. 15 GDPR)',
-    right2: 'Виправлення неправильних даних (ст. 16 GDPR)',
-    right3: 'Видалення ваших даних (ст. 17 GDPR)',
-    right4: 'Обмеження обробки (ст. 18 GDPR)',
-    right5: 'Переносимість даних (ст. 20 GDPR)',
-    right6: 'Заперечення проти обробки (ст. 21 GDPR)',
-    right7: 'Скаргу до наглядового органу (ст. 77 GDPR)',
-    section5Title: '5. Безпека даних',
-    section5Text: 'Наш сайт використовує SSL- або TLS-шифрування з міркувань безпеки. Зашифроване з\'єднання можна розпізнати за значком замка в адресному рядку браузера.',
-    section6Title: '6. Актуальність і зміни цієї політики конфіденційності',
-    section6Text: 'Ця політика конфіденційності актуальна станом на березень 2026 року. У зв\'язку з подальшим розвитком нашого сайту або зміною законодавчих вимог може виникнути необхідність змінити цю політику конфіденційності.',
-    lastUpdated: 'Актуально: березень 2026',
-    footerCopyright: '© 2026 Анна Грищенко · Усі права захищені',
-    home: 'Головна',
-    legalNotice: 'Імпресум',
-    name: 'Анна Грищенко',
-  },
 };
 
-export default function Datenschutz() {
+function DatenschutzContent() {
   const searchParams = useSearchParams();
   const [lang, setLang] = useState('de');
   const t = translations[lang];
@@ -207,12 +207,11 @@ export default function Datenschutz() {
     serviceDesc: { fontFamily: fontBody, fontSize: '13px', color: '#6a5a4a', lineHeight: '1.6', fontWeight: '400' },
     link: { color: '#b8927a', textDecoration: 'none' },
     footer: { textAlign: 'center', padding: '40px 20px', fontSize: '13px', color: '#8b7355' },
-    langSwitcher: { position: 'fixed', top: '20px', right: '20px', zIndex: 1000, display: 'flex', gap: '8px', background: 'rgba(255,255,255,0.95)', padding: '8px 12px', borderRadius: '25px', boxShadow: '0 4px 20px rgba(0,0,0,0.1)' },
+    langSwitcher: { position: 'fixed', top: '20px', right: '20px', zIndex: 1000, display: 'flex', gap: '6px', background: 'rgba(255,255,255,0.95)', padding: '8px 12px', borderRadius: '25px', boxShadow: '0 4px 20px rgba(0,0,0,0.1)' },
   };
 
   return (
     <div style={styles.container}>
-      {/* Language Switcher */}
       <div style={styles.langSwitcher}>
         {langOrder.map(l => (
           <button
@@ -311,13 +310,13 @@ export default function Datenschutz() {
           <p style={styles.paragraph}>{t.section4Intro}</p>
           <div style={styles.highlight}>
             <p style={{...styles.paragraph, margin: 0}}>
-              • <strong>{t.right1.split('(')[0]}</strong> ({t.right1.split('(')[1]}<br />
-              • <strong>{t.right2.split('(')[0]}</strong> ({t.right2.split('(')[1]}<br />
-              • <strong>{t.right3.split('(')[0]}</strong> ({t.right3.split('(')[1]}<br />
-              • <strong>{t.right4.split('(')[0]}</strong> ({t.right4.split('(')[1]}<br />
-              • <strong>{t.right5.split('(')[0]}</strong> ({t.right5.split('(')[1]}<br />
-              • <strong>{t.right6.split('(')[0]}</strong> ({t.right6.split('(')[1]}<br />
-              • <strong>{t.right7.split('(')[0]}</strong> ({t.right7.split('(')[1]}
+              • {t.right1}<br />
+              • {t.right2}<br />
+              • {t.right3}<br />
+              • {t.right4}<br />
+              • {t.right5}<br />
+              • {t.right6}<br />
+              • {t.right7}
             </p>
           </div>
         </div>
@@ -343,5 +342,13 @@ export default function Datenschutz() {
         </p>
       </footer>
     </div>
+  );
+}
+
+export default function Datenschutz() {
+  return (
+    <Suspense fallback={<div style={{ minHeight: '100vh', background: '#fdf6f0' }} />}>
+      <DatenschutzContent />
+    </Suspense>
   );
 }
