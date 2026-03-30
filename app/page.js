@@ -364,8 +364,7 @@ export default function Home() {
                 ✓ {t.aboutBadge1}<br />
                 ✓ {t.aboutBadge2}<br />
                 ✓ {t.aboutBadge3}<br />
-                ✓ {t.aboutBadge4}<br />
-                ✓ {t.aboutBadge5}
+                ✓ {t.aboutBadge4}
               </div>
             </div>
           </div>
