@@ -276,7 +276,7 @@ export default function Home() {
         overflow: 'hidden',
       }}>
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'linear-gradient(135deg, #fdf6f0 0%, #f8e8e0 50%, #f5dcd0 100%)', zIndex: 0 }} />
-        <div style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: '60%', backgroundImage: `url(${images.statueHead})`, backgroundSize: 'cover', backgroundPosition: 'center left', opacity: 0.12, zIndex: 1 }} />
+        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundImage: `url(${images.statueHead})`, backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.12, zIndex: 1 }} />
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'linear-gradient(135deg, rgba(201,160,135,0.15) 0%, rgba(184,146,122,0.1) 50%, transparent 100%)', zIndex: 2 }} />
 
         <svg style={{ position: 'absolute', top: '15%', right: '5%', width: '200px', opacity: 0.25, zIndex: 2 }} viewBox="0 0 200 60">
@@ -312,7 +312,7 @@ export default function Home() {
           </a>
         </div>
         <div style={{ position: 'absolute', bottom: '40px', fontFamily: fontBody, fontSize: '12px', color: '#b8927a', letterSpacing: '2px', zIndex: 10 }}>
-          @dr.hryshchenko.de
+          @dr.hryshchenko_de
         </div>
       </section>
 
@@ -438,10 +438,15 @@ export default function Home() {
 
       {/* Kontakt Section */}
       <section style={{ padding: '80px 20px', background: 'white', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', top: '20%', left: '10%', width: '150px', height: '150px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(201,160,135,0.08) 0%, transparent 70%)', zIndex: 0 }} />
-        <div style={{ position: 'absolute', bottom: '10%', right: '15%', width: '100px', height: '100px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(184,212,227,0.1) 0%, transparent 70%)', zIndex: 0 }} />
+        {/* Background Image - Statue Hands */}
+        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundImage: `url(${images.statueHands})`, backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.06, zIndex: 0 }} />
+        {/* White overlay for softness */}
+        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'linear-gradient(180deg, rgba(255,255,255,0.92) 0%, rgba(253,246,240,0.88) 100%)', zIndex: 1 }} />
+        {/* Decorative circles */}
+        <div style={{ position: 'absolute', top: '20%', left: '10%', width: '150px', height: '150px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(201,160,135,0.08) 0%, transparent 70%)', zIndex: 2 }} />
+        <div style={{ position: 'absolute', bottom: '10%', right: '15%', width: '100px', height: '100px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(184,212,227,0.1) 0%, transparent 70%)', zIndex: 2 }} />
         
-        <div style={{ maxWidth: '600px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
+        <div style={{ maxWidth: '600px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
           <div style={{ fontFamily: fontBody, fontSize: '11px', letterSpacing: '3px', color: '#c9a087', marginBottom: '15px', fontWeight: '500' }}>{t.contactLabel}</div>
           <h2 style={{ fontFamily: fontHeading, fontSize: '36px', fontWeight: '400', margin: '0 0 30px 0', color: '#5a4a3a', position: 'relative', display: 'inline-block' }}>
             {t.contactTitle}
@@ -452,7 +457,7 @@ export default function Home() {
           <p style={{ fontFamily: fontBody, fontSize: '15px', color: '#8b7355', marginBottom: '40px', marginTop: '20px', lineHeight: '1.8', fontWeight: '400' }}>{t.contactText}</p>
 
           <div style={{ display: 'grid', gap: '20px', marginBottom: '30px' }}>
-            <a href="https://instagram.com/dr.hryshchenko.de" target="_blank" rel="noopener noreferrer" style={{
+            <a href="https://instagram.com/dr.hryshchenko_de" target="_blank" rel="noopener noreferrer" style={{
               fontFamily: fontBody, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', padding: '20px',
               background: 'linear-gradient(135deg, #c9a087 0%, #b8927a 100%)', borderRadius: '16px', textDecoration: 'none',
               color: 'white', fontSize: '15px', fontWeight: '500', boxShadow: '0 10px 30px rgba(185, 146, 122, 0.3)', transition: 'transform 0.3s ease',
