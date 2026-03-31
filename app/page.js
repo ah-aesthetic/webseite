@@ -311,8 +311,10 @@ export default function Home() {
             {t.ctaButton}
           </a>
         </div>
-        <div style={{ position: 'absolute', bottom: '40px', fontFamily: fontBody, fontSize: '12px', color: '#b8927a', letterSpacing: '2px', zIndex: 10 }}>
-          @dr.hryshchenko_de
+        <div style={{ position: 'absolute', bottom: '30px', fontFamily: fontBody, fontSize: '12px', color: '#b8927a', letterSpacing: '2px', zIndex: 10 }}>
+          <a href="https://instagram.com/dr.hryshchenko_de" target="_blank" rel="noopener noreferrer" style={{ color: '#b8927a', textDecoration: 'none' }}>
+            @dr.hryshchenko_de
+          </a>
         </div>
       </section>
 
@@ -439,7 +441,7 @@ export default function Home() {
       {/* Kontakt Section */}
       <section style={{ padding: '80px 20px', background: 'white', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
         {/* Background Image - Statue Hands */}
-        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundImage: `url(${images.statueHands})`, backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.06, zIndex: 0 }} />
+        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundImage: `url(${images.statueHands})`, backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.2, zIndex: 0 }} />
         {/* White overlay for softness */}
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'linear-gradient(180deg, rgba(255,255,255,0.92) 0%, rgba(253,246,240,0.88) 100%)', zIndex: 1 }} />
         {/* Decorative circles */}
