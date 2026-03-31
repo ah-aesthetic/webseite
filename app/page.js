@@ -279,9 +279,6 @@ export default function Home() {
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundImage: `url(${images.statueHead})`, backgroundSize: 'cover', backgroundPosition: '25% center', opacity: 0.22, zIndex: 1 }} />
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'linear-gradient(135deg, rgba(201,160,135,0.15) 0%, rgba(184,146,122,0.1) 50%, transparent 100%)', zIndex: 2 }} />
 
-        <svg style={{ position: 'absolute', top: '15%', right: '5%', width: '200px', opacity: 0.25, zIndex: 2 }} viewBox="0 0 200 60">
-          <path d="M10,30 Q50,10 100,25 T190,30" stroke="#b8d4e3" strokeWidth="8" fill="none" strokeLinecap="round" strokeDasharray="2,8"/>
-        </svg>
         <svg style={{ position: 'absolute', bottom: '20%', left: '5%', width: '150px', opacity: 0.2, zIndex: 2 }} viewBox="0 0 150 50">
           <path d="M5,25 Q40,5 75,20 T145,25" stroke="#c5ddd4" strokeWidth="6" fill="none" strokeLinecap="round" strokeDasharray="3,6"/>
         </svg>
