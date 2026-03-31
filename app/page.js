@@ -441,7 +441,7 @@ export default function Home() {
       {/* Kontakt Section */}
       <section style={{ padding: '80px 20px', background: 'white', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
         {/* Background Image - Statue Hands */}
-        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundImage: `url(${images.statueHands})`, backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.45, zIndex: 0 }} />
+        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundImage: `url(${images.statueHands})`, backgroundSize: 'cover', backgroundPosition: 'center', opacity: 1, zIndex: 0 }} />
         {/* White overlay for softness */}
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'linear-gradient(180deg, rgba(255,255,255,0.75) 0%, rgba(253,246,240,0.7) 100%)', zIndex: 1 }} />
         {/* Decorative circles */}
