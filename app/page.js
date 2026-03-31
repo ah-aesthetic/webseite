@@ -276,7 +276,7 @@ export default function Home() {
         overflow: 'hidden',
       }}>
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'linear-gradient(135deg, #fdf6f0 0%, #f8e8e0 50%, #f5dcd0 100%)', zIndex: 0 }} />
-        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundImage: `url(${images.statueHead})`, backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.12, zIndex: 1 }} />
+        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundImage: `url(${images.statueHead})`, backgroundSize: 'cover', backgroundPosition: '25% center', opacity: 0.22, zIndex: 1 }} />
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'linear-gradient(135deg, rgba(201,160,135,0.15) 0%, rgba(184,146,122,0.1) 50%, transparent 100%)', zIndex: 2 }} />
 
         <svg style={{ position: 'absolute', top: '15%', right: '5%', width: '200px', opacity: 0.25, zIndex: 2 }} viewBox="0 0 200 60">
