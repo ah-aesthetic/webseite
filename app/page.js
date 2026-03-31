@@ -441,9 +441,9 @@ export default function Home() {
       {/* Kontakt Section */}
       <section style={{ padding: '80px 20px', background: 'white', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
         {/* Background Image - Statue Hands */}
-        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundImage: `url(${images.statueHands})`, backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.2, zIndex: 0 }} />
+        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundImage: `url(${images.statueHands})`, backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.45, zIndex: 0 }} />
         {/* White overlay for softness */}
-        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'linear-gradient(180deg, rgba(255,255,255,0.92) 0%, rgba(253,246,240,0.88) 100%)', zIndex: 1 }} />
+        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'linear-gradient(180deg, rgba(255,255,255,0.75) 0%, rgba(253,246,240,0.7) 100%)', zIndex: 1 }} />
         {/* Decorative circles */}
         <div style={{ position: 'absolute', top: '20%', left: '10%', width: '150px', height: '150px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(201,160,135,0.08) 0%, transparent 70%)', zIndex: 2 }} />
         <div style={{ position: 'absolute', bottom: '10%', right: '15%', width: '100px', height: '100px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(184,212,227,0.1) 0%, transparent 70%)', zIndex: 2 }} />
