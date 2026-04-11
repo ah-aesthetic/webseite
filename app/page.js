@@ -178,7 +178,7 @@ const treatmentsData = {
   ],
   einzel: [
     { name: { de: 'Zornesfalte', en: 'Frown Lines', ru: 'Межбровье', uk: 'Міжбрів\'я' }, price: 'Ab 200 €', desc: { de: '', en: '', ru: '', uk: '' } },
-    { name: { de: 'Stirn', en: 'Forehead', ru: 'Лоб', uk: 'Лоб' }, price: 'Ab 200 €', desc: { de: 'In Kombination mit Zornesfalte', en: 'Combined with frown lines', ru: 'В сочетании с межбровьем', uk: 'У поєднанні з міжбрів\'ям' } },
+    { name: { de: 'Stirn', en: 'Forehead', ru: 'Лоб', uk: 'Лоб' }, price: '–', desc: { de: 'Wird aus ästhetischen Gründen nur in Kombination mit Zornesfalte behandelt (siehe Pakete)', en: 'For aesthetic reasons, only treated in combination with frown lines (see packages)', ru: 'По эстетическим причинам лечится только в сочетании с межбровьем (см. пакеты)', uk: 'З естетичних причин лікується лише в поєднанні з міжбрів\'ям (див. пакети)' } },
     { name: { de: 'Krähenfüße', en: 'Crow\'s Feet', ru: 'Гусиные лапки', uk: 'Гусячі лапки' }, price: 'Ab 200 €', desc: { de: '', en: '', ru: '', uk: '' } },
     { name: { de: 'Kinnfalten', en: 'Chin Lines', ru: 'Морщины подбородка', uk: 'Зморшки підборіддя' }, price: 'Ab 150 €', desc: { de: '', en: '', ru: '', uk: '' } },
     { name: { de: 'Nasenfalten', en: 'Bunny Lines', ru: 'Морщины носа', uk: 'Зморшки носа' }, price: 'Ab 150 €', desc: { de: '', en: '', ru: '', uk: '' } },
